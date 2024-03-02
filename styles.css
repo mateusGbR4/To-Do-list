@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+}
+body{
+  display: flex;
+}
+nav{
+  background-color: #fff;
+  height: 100vh;
+  width: 400px;
+  transform: translateX(-90%);
+  transition: 0.5s;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  position: fixed;
+}
+.expandir{
+  transform: translateX(0);
+  transition: 0.5s;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+nav ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+.btn-expandir{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+main{
+  height: 100vh;
+  width: 100%;
+}
+.adicionar-tarefa {
+  background-color: white;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 30%;
+  gap: 1rem;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+  justify-content: center;
+ }
+ #CloseDiv{
+  border: none;
+  float: left;
+  padding: 0 15px;
+  background-color: brown;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+
+ }
+.input-task {
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+  height: 40px;
+  padding: 10px;
+}
+.button-add-task {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  background-color: rgb(168, 168, 166);
+  font-size: 17px;
+  padding: 0 15px;
+  float: right;
+  cursor: pointer;
+  font-weight: 700;
+}
+.button-add-task:hover {
+  opacity: 0.8;
+}
+.button-add-task:active {
+  opacity: 0.6;
+}
+.list-tasks {
+  width: 100%;
+  list-style: none;
+  margin-top: 30px;
+}
+.tasks {
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.tasks:hover img{
+  opacity: 1;
+}
+.tasks:active{
+  opacity: 0.6;
+}
+img {
+  height: 25px;
+  width: 25px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.input-task{
+  font-size: 17px;
+  border: 1px solid;
+}
+.done{
+  background-color: rgb(92, 233, 92);
+  text-decoration: line-through;
+}
+.showtasks{
+  height: 70vh;
+  width: 30vw;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.day{
+  left: 0;
+}
+#show-add-task{
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+#show-add-task:hover{
+  color: orange;
+}
+
+@media (max-width:999px){
+  nav{
+    width:300px;
+    transform: translateX(-85%);
+  }
+  .adicionar-tarefa{
+    width: 75%;
+  }
+  .showtasks{
+    width: 70vw;
+  }
+}
